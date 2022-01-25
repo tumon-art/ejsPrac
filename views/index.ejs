@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <header>
+        <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+        </nav>
+        </header>
+
+    <main>
+        <form action="/" method="post">
+            <input type="text" name="plang" placeholder="Programming Lang">
+            <button type="submit">Add</button>
+        </form>
+
+        <ul>
+            <% if(pl.length > 0) { %>
+                <% for(let i=0; i < pl.length; i++){ %>
+                    <li> <%=pl[i] %> </li>
+                <% }%>
+            <% }else{%>
+                <p> No Data Found</p>
+            <% } %>
+        </ul>
+    </main>
+
+    <footer>
+        All rights reserved by &copy; Tumon
+    </footer>
+</body>
+</html>
