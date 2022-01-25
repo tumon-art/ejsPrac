@@ -1,7 +1,7 @@
 const express = require('express')
 
 const app = express()
-const port = 3000
+const port = 3001
 
 app.use(express.urlencoded({extended:true}))
 
@@ -13,6 +13,11 @@ let plangArr = []
 
 app.get('/',(req,res)=>{
     res.render("index",{pl:plangArr})
+})
+
+// Contact 
+app.get('/contact',(req,res)=>{
+    res.render("contact",{})
 })
 
 // receiving plang
